@@ -14,6 +14,7 @@
       <link rel="stylesheet" href="style.css" />
       <title>Encriptor</title>
    </head>
+   
    <body>
       <header>
          <div class="encabezado-flex">
@@ -27,6 +28,7 @@
       <main>
          <section class="textos-flex">
             <textarea
+            class="text-in"
                name="text-in"
                id=""
                cols="100"
@@ -34,15 +36,16 @@
                required
                placeholder="Ingrese el texto aquí"
             ></textarea>
-            <output for="text-in" class="text" name="text-out" 
+            <output for="text-in" class="text-out" name="text-out" 
                >Aquí va el texto transcripto</output
             >
          </section>
          <section class="botones-flex">
             <input
                type="button"
-               class="btn"
+               class="btn-encriptar"
                id="encriptar"
+               onclick="btnEncriptar()"
                value="encriptar"
             />
             <input
@@ -51,12 +54,14 @@
                id="desencriptar"
                value="desencriptar"
             />
-            <input type="button" class="btn" id="copiar" value="copiar" />
+            <input type="button" class="btn" id="copiar" onclick="" value="copiar" />
          </section>
       </main>
       <footer class="footer-flex">
          <img class="logo" src="img/diamod.png" alt="logo-diamante" />
          <h4 class="subtitulo">&copy Arq|WandaOz - 2024</h4>
       </footer>
+      <script src="script.js"></script>
    </body>
+
 </html>
