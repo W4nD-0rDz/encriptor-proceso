@@ -33,13 +33,13 @@
          <section class="entrada-flex">
             <textarea
                class="text-in"
-               cols="100"
+               cols="30"
                rows="10"
                required
                placeholder="Ingrese el texto aquí"
             ></textarea>
             <div class="informacion">
-               <h6>&#9758; Solo letras minúsculas y sin acentos</h6>
+               <h6 class="texto-info">&#9758; Solo letras minúsculas y sin acentos</h6>
             </div>
             <div class="botones-flex">
                <input
@@ -60,14 +60,16 @@
          </section>
 
          <section class="salida-flex">
-            <textarea class="text-out" cols="100"
+            <textarea class="text-out" cols="20"
                rows="10" placeholder="Aquí va el texto encriptado"></textarea>
-            <input type="button" class="btn-copiar" id="copiar" value="copiar" />
+               <div class="botones-flex"><input type="button" class="btn-copiar" id="copiar" value="copiar" /></div>
+            
          </section>
       </main>
       <footer class="footer-flex">
-         <img class="logo" src="img/diamod.png" alt="logo-diamante" />
          <h4 class="subtitulo">&copy Arq|WandaOz - 2024</h4>
+         <img class="logo" src="img/diamod.png" alt="logo-diamante" />
+         
       </footer>
       <script src="script.js"></script>
    </body>

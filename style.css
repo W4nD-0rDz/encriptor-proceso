@@ -1,10 +1,10 @@
 :root {
-   --color1: #F3F5FC;
-   --color2: #EFF1FA;
-   --color3: #E9ECF8;
-   --color4: #AAB2D5;
-   --color5: #757FB2;
-   --color6: #052051;
+   --color1: #f3f5fc;
+   --color2: #eff1fa;
+   --color3: #e9ecf8;
+   --color4: #aab2d5;
+   --color5: #757fb2;
+   --color6: #404561;
 }
 
 body {
@@ -13,6 +13,7 @@ body {
    font-weight: 100;
    font-size: 1rem;
    font-style: normal;
+   background-color: var(--color3);
    width: 100%;
 }
 
@@ -22,44 +23,50 @@ body {
 }
 
 .titulo {
-   text-align: center;
-   margin: 0 0 1em;
+   margin: 0;
    font-size: 2rem;
-   clear: left;
-   color: var(--color5);
+   color: var(--color4);
    font-weight: 600;
 }
 .subtitulo {
-   text-align: right;
-   margin: 0 0 1em;
-   font-size: 2rem;
-   clear: left;
-   color: var(--color5);
+   margin: 0;
+   font-size: 0.75rem;
+   color: var(--color6);
+   font-weight: 200;
+}
+
+.texto-info {
+   font-size: 0.75rem;
    font-weight: 200;
 }
 
 .encabezado-flex {
-   display: flex;
-   justify-content: center;
+   display: block;
+   text-align: center;
    background-color: var(--color6);
    width: 100%;
    padding: 2%;
 }
 
 main {
-   display:flex;
-   
+   display: flex;
+   margin: 1%;
+   padding: 1%;
 }
 
-.entrada-flex , .salida-flex{
+.entrada-flex,
+.salida-flex {
    width: 50%;
+   box-sizing: content-box;
    display: flex;
+   flex-direction: column;
    justify-content: left;
    background-color: var(--color3);
    width: 100%;
-   padding: auto;
-   border: 2px dotted var(--color4);
-   margin: 2rem;
+   padding: 2%;
+   /* border: 2px dotted var(--color4); */
+   border: none;
+   margin: 2%;
 }
 
 /* .salida-flex {
@@ -70,71 +77,95 @@ main {
    padding: auto;
 } */
 
-textarea{
+textarea {
+   width: 90%;
    border: none;
    border-radius: 0.5rem;
-   /* color: var(--color4); */
-   margin-top: 1rem;
+   border-color: var(--color5);
+   margin: 1rem;
    text-transform: lowercase;
-   font-size: 1rem;
-   font-weight: 700;
+   font-size: 1.25rem;
+   font-weight: 500;
+   position: relative;
 }
-.textarea:focus{
+.textarea:focus {
    outline: none;
-   
 }
-::placeholder{
+::placeholder {
    color: var(--color5);
-   font-size: 1rem;
-   font-weight: 400;
+   font-size: 1.25rem;
+   font-weight: 500;
 }
 
-.text-in{
+.text-in {
    background-color: var(--color3);
+   color: var(--color6);
 }
-.text-out{
+.text-out {
    background-color: var(--color1);
    background-image: url(img/muñeco.png);
    background-repeat: no-repeat;
 }
 
-.botones-flex{
-   display: flex;
-
+.botones-flex {
+   margin-top: auto;
+   display: inline-block;
+   vertical-align: bottom;
 }
 
 .btn-encriptar,
 .btn-desencriptar,
 .btn-copiar {
-   width: 6rem;
-   height: 2rem;
-   color: var(--color6);
-   padding: .1rem;
+   width: 9rem;
+   height: 3rem;
+   font-size: 1.25rem;
+   font-weight: 600;
+   padding: 0.1rem;
    margin: 1rem 1rem;
-   border: 2px solid var(--color6);
+   border: 2px solid;
    border-radius: 0.5rem;
    cursor: pointer;
 }
-.btn-encriptar{
+.btn-encriptar {
    background-color: var(--color6);
    border-color: var(--color6);
    color: var(--color1);
 }
 
-.btn-desencriptar{
+.btn-desencriptar {
    background-color: var(--color5);
    border-color: var(--color5);
 }
 
-.btn-copiar{
+.btn-copiar {
    background-color: var(--color4);
    border-color: var(--color4);
 }
 
 .footer-flex {
-   display: flex;
-   justify-content: center;
+   display: block;
+   text-align: center;
    background-color: var(--color4);
    width: 100%;
    padding: 2%;
+}
+
+@media screen and (max-width: 900px) {
+   header,
+   footer {
+      width: 100%;
+   }
+   main {
+      display: flex;
+      margin: 1%;
+      padding: 1%;
+      flex-direction: column;
+   }
+   .entrada-flex,
+   .salida-flex {
+      width: 100%;
+      margin: 0;
+      box-sizing: content-box;
+      padding: 1rem;
+   }
 }
