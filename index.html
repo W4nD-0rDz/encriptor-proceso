@@ -25,7 +25,7 @@
    <body>
       <header>
          <div class="encabezado-flex">
-            <img src="img/diamod.png" alt="diamante" class="logo" />
+            <!-- <img src="img/diamod.png" alt="diamante" class="logo" /> -->
             <h1 class="titulo">Encriptor</h1>
          </div>
       </header>
@@ -44,14 +44,14 @@
             <div class="botones-flex">
                <input
                   type="button"
-                  class="btn-encriptar"
+                  class="btn"
                   id="encriptar"
                   onclick="btnEncriptar()"
                   value="encriptar"
                />
                <input
                   type="button"
-                  class="btn-desencriptar"
+                  class="btn"
                   id="desencriptar"
                   onclick="btnDesencriptar()"
                   value="desencriptar"
@@ -62,7 +62,7 @@
          <section class="salida-flex">
             <textarea class="text-out" cols="20"
                rows="10" placeholder="Aquí va el texto encriptado"></textarea>
-               <div class="botones-flex"><input type="button" class="btn-copiar" id="copiar" value="copiar" /></div>
+               <div class="botones-flex"><input type="button" class="btn" id="copiar" onclick="btnCopiar()" value="copiar" /></div>
             
          </section>
       </main>
