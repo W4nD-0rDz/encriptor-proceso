@@ -14,12 +14,6 @@ body {
    font-size: 1rem;
    font-style: normal;
    background-color: var(--color3);
-   width: 100%;
-}
-
-.logo {
-   width: calc(20% -20px);
-   margin: 1rem 1.5rem;
 }
 
 .titulo {
@@ -56,57 +50,67 @@ body {
 
 main {
    display: flex;
-   margin-top: 2rem;
-   margin-bottom: 6rem;
+   vertical-align: middle;
+   margin-top: 12rem;
+   margin-bottom: 12rem;
    padding-top: 4rem;
    overflow: auto;
+   
 }
 
+/* sections */
 .entrada-flex,
 .salida-flex {
    width: 50%;
+   height: 100%;
+
    box-sizing: content-box;
    display: flex;
    flex-direction: column;
    justify-content: left;
    background-color: var(--color3);
-   width: 100%;
-   padding: 2%;
+   padding: 1%;
    border: none;
-   margin: 2%;
+   margin: 1%;
 }
-
 
 textarea {
    width: 90%;
-   border: none;
-   border-radius: 0.5rem;
-   border-color: var(--color5);
+   border-radius: 0.6rem;
    margin: 1rem;
    text-transform: lowercase;
    font-size: 1.25rem;
    font-weight: 500;
    position: relative;
+   border:none;
 }
-.textarea:focus {
+textarea:focus{
    outline: none;
+   border:3px solid var(--color5);
 }
+
+textarea .text-in{
+   background-color: var(--color2);
+   color: var(--color6);
+}
+
+textarea .text-out {
+   background-color: var(--color1);
+   border-color: var(--color1);
+   background-image: url(img/muñeco.png);
+   background-size: 35%;
+   background-repeat: no-repeat;
+   background-position-x: center;
+   background-position-y: center;
+}
+
 ::placeholder {
    color: var(--color5);
    font-size: 1.25rem;
    font-weight: 500;
 }
 
-.text-in {
-   background-color: var(--color2);
-   color: var(--color6);
-}
-.text-out {
-   background-color: var(--color1);
-   background-image: url(img/muñeco.png);
-   background-repeat: no-repeat;
-}
-
+/* botones */
 .botones-flex {
    margin-top: auto;
    display: inline-block;
@@ -143,16 +147,23 @@ textarea {
    border-color: var(--color4);
 }
 
+/* footer */
 .footer-flex {
    width: 100%;
-   height: 6rem;
+   height: 3rem;
    padding: 2%;
    display: block;
    position: fixed;
+   text-align: center;
    bottom: 0;
    z-index: 1000;
-   text-align: center;
    background-color: var(--color4);
+}
+
+.logo {
+   width: calc(10%);
+   margin: 1rem 1.5rem;
+   display: none;
 }
 
 @media screen and (max-width: 900px) {
@@ -163,10 +174,36 @@ textarea {
    }
    main {
       flex-direction: column;
+      margin-top: 6rem;
+      margin-bottom: 6rem;
    }
    .entrada-flex,
    .salida-flex {
       width: 100%;
+      margin: auto;
+      padding: 2rem;
+      box-sizing: content-box;
+   }
+}
+
+@media screen and (max-width: 500px){
+   .header-flex,
+   .footer-flex {
+      width: 100%;
+      position: fixed;
+      text-align:center;
+   }
+
+   main{
+      width: 500px;
+      flex-direction: column;
+      margin-top: 6rem;
+      margin-bottom: 6rem;
+   }
+
+   .entrada-flex,
+   .salida-flex {
+      width: 60%;
       margin: 1rem;
       padding: 1rem;
       box-sizing: content-box;
