@@ -45,7 +45,7 @@ body {
    display: block;
    text-align: left;
    background-color: var(--color6);
-   background-image: url(img/diamod.png);
+   background-image: url(diamod.png);
    background-blend-mode: multiply;
 }
 
@@ -96,7 +96,7 @@ textarea.text-in {
 textarea.text-out {
    background-color: var(--color1);
    border-color: var(--color1);
-   background-image: url(img/muñeco.png);
+   background-image: url(muñeco.png);
    background-size: 35%;
    background-repeat: no-repeat;
    background-position-x: center;
