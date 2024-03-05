@@ -18,8 +18,9 @@ body {
 
 .titulo {
    margin: 0;
+   padding-left: 1rem;
    font-size: 3rem;
-   color: var(--color4);
+   color: var(--color3);
    font-weight: 600;
 }
 .subtitulo {
@@ -42,7 +43,7 @@ body {
    top: 0;
    padding: 2%;
    display: block;
-   text-align: center;
+   text-align: left;
    background-color: var(--color6);
    background-image: url(img/diamod.png);
    background-blend-mode: multiply;
@@ -55,7 +56,6 @@ main {
    margin-bottom: 12rem;
    padding-top: 4rem;
    overflow: auto;
-   
 }
 
 /* sections */
@@ -63,7 +63,6 @@ main {
 .salida-flex {
    width: 50%;
    height: 100%;
-
    box-sizing: content-box;
    display: flex;
    flex-direction: column;
@@ -82,19 +81,19 @@ textarea {
    font-size: 1.25rem;
    font-weight: 500;
    position: relative;
-   border:none;
+   border: none;
 }
-textarea:focus{
+textarea:focus {
    outline: none;
-   border:3px solid var(--color5);
+   border: 3px solid var(--color5);
 }
 
-textarea .text-in{
+textarea.text-in {
    background-color: var(--color2);
    color: var(--color6);
 }
 
-textarea .text-out {
+textarea.text-out {
    background-color: var(--color1);
    border-color: var(--color1);
    background-image: url(img/muñeco.png);
@@ -159,6 +158,9 @@ textarea .text-out {
    z-index: 1000;
    background-color: var(--color4);
 }
+.titulo{
+      padding-left: 2rem;
+   }
 
 .logo {
    width: calc(10%);
@@ -186,15 +188,19 @@ textarea .text-out {
    }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 500px) {
    .header-flex,
    .footer-flex {
       width: 100%;
       position: fixed;
-      text-align:center;
+      text-align: center;
+   }
+   
+   .subtitulo {
+      font-size: 1rem;
    }
 
-   main{
+   main {
       width: 500px;
       flex-direction: column;
       margin-top: 6rem;
@@ -208,4 +214,20 @@ textarea .text-out {
       padding: 1rem;
       box-sizing: content-box;
    }
+
+   textarea.text-out{
+      background-size: 70%;
+   }
+
+   .btn {
+   width: 5rem;
+   height: 2rem;
+   font-size: 0.75rem;
+   font-weight: 600;
+   padding: 0.1rem;
+   margin: 1rem 1rem;
+   border: 2px solid;
+   border-radius: 0.5rem;
+   cursor: pointer;
+}
 }
