@@ -96,7 +96,7 @@ textarea.text-in {
 textarea.text-out {
    background-color: var(--color1);
    border-color: var(--color1);
-   background-image: url(muñeco.png);
+   background-image: url(muneco.png);
    background-size: 35%;
    background-repeat: no-repeat;
    background-position-x: center;
